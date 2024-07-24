@@ -14,9 +14,10 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url();
+    background-image: url("images/backgroundimg.jpg");
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 .container{
     padding: 10px 10%;
@@ -153,10 +154,10 @@ nav ul li :hover::after{
 }
 .services-list div i{
     font-size: 50px;
-    font-weight: 500;
     margin-bottom: 15px;
 }
 .services-list div a{
+    visibility: hidden;
     text-decoration: none;
     color: #0c0c4a;
     font-size: 12px;
@@ -166,6 +167,12 @@ nav ul li :hover::after{
 .services-list div:hover{
     background: #ff004f;
     transform: translateY(-10px);
+}
+.services-list h2{
+    margin: 20px 0;
+}
+.services-list p{
+    margin: 20px 0;
 }
 
 /* My Work */
@@ -191,6 +198,7 @@ nav ul li :hover::after{
     width: 100%;
     height: 0;
     background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    color: #f7efd9;
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -228,6 +236,7 @@ nav ul li :hover::after{
 }
 .btn{
     display: block;
+    visibility: hidden;
     margin: 50px auto;
     width: fit-content;
     border: 1px solid  #ff004f;
@@ -249,6 +258,10 @@ nav ul li :hover::after{
 }
 .contact-left p{
     margin-top: 30px;
+}
+.contact-left p a{
+    text-decoration: none;
+    color: #0c0c4a;
 }
 .contact-left p i{
     color: #ff004f;
@@ -272,6 +285,7 @@ nav ul li :hover::after{
 .btn.btn2{
     display: inline-block;
     background: #ff004f;
+    visibility: visible;
 }
 .contact-right form{
     width: 100%;
@@ -280,7 +294,7 @@ form input, form textarea{
     width: 100%;
     border: 0;
     outline: none;
-    background: #e4ca81;
+    background: hsl(44, 65%, 70%);
     padding: 15px;
     margin: 15px 0;
     color: #0c0c4a;
@@ -313,14 +327,15 @@ nav .fa-solid{
 
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url();
+        background-image: url(images/smallScreenBG.jpg);
     }
     .header-text{
-        margin-top: 100%;
-        font-size: 16px;
+        font-size: 18px;
+        margin-top: 10%;
     }
     .header-text h1{
-        font-size: 30px;
+        font-size: 24px;
+        margin-top: 0%;
     }
     nav .fa-solid{
         display: block;
@@ -330,8 +345,8 @@ nav .fa-solid{
         background: #ff004f;
         position: fixed;
         top: 0;
-        right: -200px;
-        width: 200px;
+        right: -150px;
+        width: 150px;
         height: 100vh;
         padding-top: 50px;
         z-index: 2;
