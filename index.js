@@ -1,6 +1,7 @@
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 var sidemenu = document.getElementById("sidemenu");
+var menuBtn = document.getElementById("menuBtn");
 
 function opentab(tabname) {
   for (tablink of tablinks) {
@@ -13,6 +14,11 @@ function opentab(tabname) {
   document.getElementById(tabname).classList.add("active-tab");
 }
 
+document.addEventListener("click", (e) => {
+  if(!sidemenu.contains(e.target) && e.target != menuBtn){
+    closemenu();
+  }
+});
 function openmenu() {
   sidemenu.style.right = "0";
 }

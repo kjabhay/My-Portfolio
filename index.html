@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- <?php header("Cache-Control: max-age=3000, must-revalidate"); ?> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
@@ -16,14 +17,14 @@
             <nav>
                 <img src="images/icon.png" class="logo">
                 <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#header" onclick="closemenu()">Home</a></li>
+                    <li><a href="#about" onclick="closemenu()">About</a></li>
+                    <li><a href="#services" onclick="closemenu()">Services</a></li>
+                    <li><a href="#portfolio" onclick="closemenu()">Portfolio</a></li>
+                    <li><a href="#contact" onclick="closemenu()">Contact</a></li>
                     <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                <i class="fa-solid fa-bars" id="menuBtn" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Student</p>
@@ -40,7 +41,7 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Hi, I'm Jyothsna Abhay, a prefinal year undergraduate at IIT Hyderabad, pursuing a degree in Engineering Science. I have a strong interest in web development and software development roles, complemented by hands-on experience in data science and machine learning. Through my leadership roles in various student organizations, I have honed my skills in team management, strategic planning, and effective communication. I am eager to apply my technical expertise and leadership abilities to new challenges and opportunities, contributing to impactful projects and continuing to grow professionally..</p>
+                    <p>Hi, I'm <strong>Jyothsna Abhay</strong>, a prefinal year undergraduate at <strong>IIT Hyderabad</strong>, pursuing <strong>BTech in Engineering Science</strong>. I have a strong interest in <strong>WebDev</strong> and <strong>Software Development</strong> roles, complemented by hands-on experience in <strong>Data Science/ Machine Learning</strong>. Through my leadership roles in various student organizations, I have honed my skills in team management, strategic planning, and effective communication. I am eager to apply my technical expertise and leadership abilities to new challenges and opportunities, contributing to impactful projects and continuing to grow professionally..</p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
